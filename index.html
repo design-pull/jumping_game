@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ジャンプゲーム</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div id="game" role="application" aria-label="ジャンプゲーム">
+    <div class="layer clouds" id="clouds" aria-hidden="true">
+      <svg viewBox="0 0 1200 360" preserveAspectRatio="xMidYMid slice" style="width:200%;height:100%;display:block">
+        <defs><linearGradient id="cg2" x1="0" x2="0" y1="0" y2="1"><stop offset="0" stop-color="#fff"/><stop offset="1" stop-color="#eef"/></linearGradient></defs>
+        <g transform="translate(0,28)">
+          <ellipse cx="140" cy="72" rx="64" ry="32" fill="url(#cg2)"/>
+          <ellipse cx="360" cy="60" rx="92" ry="42" fill="url(#cg2)"/>
+          <ellipse cx="760" cy="88" rx="120" ry="46" fill="url(#cg2)"/>
+          <ellipse cx="1120" cy="70" rx="84" ry="36" fill="url(#cg2)"/>
+        </g>
+      </svg>
+    </div>
+
+    <div class="ground" aria-hidden="true">
+      <div class="seamless" aria-hidden="true"></div>
+    </div>
+
+    <div id="player" aria-hidden="true">
+      <div class="face">
+        <div class="eye left"></div>
+        <div class="eye right"></div>
+        <div class="cheeks"></div>
+        <div class="cheeks right"></div>
+      </div>
+    </div>
+
+    <div id="objs"></div>
+
+    <div id="ui" role="status" aria-live="polite">
+      <div class="panel" id="score">Score: 0</div>
+      <div class="panel" id="high">High: 0</div>
+      <div class="panel" id="lifePanel">Lives: <span id="lives">3</span></div>
+    </div>
+
+    <div id="controls">
+      <button id="muteBtn">🔊</button>
+      <button id="retryBtn">Retry</button>
+    </div>
+
+    <div id="overlay" aria-hidden="true">
+      <div id="card" class="hidden" role="dialog" aria-modal="true">
+        <h2 id="goTitle">Game Over</h2>
+        <p id="finalText">You survived 0s</p>
+        <div style="display:flex;gap:8px;justify-content:center">
+          <button id="retry2">Play Again</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="game.js" defer></script>
+</body>
+</html>
