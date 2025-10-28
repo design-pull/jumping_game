@@ -2,7 +2,7 @@
 
 ライブ版: https://design-pull.github.io/jumping_game/
 
-https://design-pull.com/wp-content/uploads/2025/10/jumping.jpg
+![Jumping preview](https://design-pull.com/wp-content/uploads/2025/10/jumping.jpg)
 
 ## 概要
 シンプルなブラウザ向けジャンプゲーム。  
